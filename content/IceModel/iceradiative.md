@@ -179,7 +179,7 @@ Also, do not recalculate the physical dust temperature merely to decompose the e
 
 The paper gives the mass density of each ice species as
 
-\[
+$$
 \boxed{
 \rho_{\rm ice}
 =
@@ -188,7 +188,7 @@ The paper gives the mass density of each ice species as
 {x_gM_g}
 }
 \tag{5}
-\]
+$$
 
 where:
 
@@ -201,11 +201,11 @@ where:
 
 The paper uses
 
-\[
+$$
 x_g=0.64,
 \qquad
 M_g=2.44.
-\]
+$$
 
 ---
 
@@ -219,11 +219,11 @@ The reason gas density appears in Equation (5) is that the chemical abundance is
 
 For example,
 
-\[
+$$
 x_{\rm H_2O}
 =
 \frac{n_{\rm H_2O}}{n_{\rm H}}.
-\]
+$$
 
 If the local gas density is known, it gives the local number of hydrogen atoms. The abundance then tells us how many ice molecules correspond to those hydrogen atoms.
 
@@ -251,7 +251,7 @@ The paper assumes that the amount of ice associated with a grain population is p
 
 The fraction of ice mass assigned to the large-grain population is
 
-\[
+$$
 \boxed{
 f_{\rm ice,l}
 =
@@ -263,7 +263,7 @@ f_{\rm dust,l}
 }
 }
 \tag{6}
-\]
+$$
 
 where:
 
@@ -274,9 +274,9 @@ where:
 
 For the adopted grain-size distribution with `q = 3.5`, the paper states that the ratio of surface area to mass of the small-grain population relative to the large-grain population is
 
-\[
+$$
 \sqrt{\frac{a_{\max,l}}{a_{\max,s}}}=1000.
-\]
+$$
 
 ---
 
@@ -284,14 +284,14 @@ For the adopted grain-size distribution with `q = 3.5`, the paper states that th
 
 It is the **local fraction of the dust mass density in the large-grain population**:
 
-\[
+$$
 \boxed{
 f_{\rm dust,l}
 =
 \frac{\rho_{\rm dust,l}}
 {\rho_{\rm dust,l}+\rho_{\rm dust,s}}
 }
-\]
+$$
 
 Thus it is conceptually a **cell-by-cell quantity**.
 
@@ -318,57 +318,57 @@ The small grains have much more total surface area.
 
 For a grain:
 
-\[
+$$
 A \propto a^2
-\]
+$$
 
 while
 
-\[
+$$
 m \propto a^3.
-\]
+$$
 
 Therefore
 
-\[
+$$
 \frac{A}{m}\propto\frac{1}{a}.
-\]
+$$
 
 So small grains provide more surface area per unit mass.
 
 For the grain-size distribution used in the paper, this leads to the stated factor
 
-\[
+$$
 R=
 \sqrt{\frac{a_{\max,l}}{a_{\max,s}}}.
-\]
+$$
 
 The paper adopts `R = 1000`.
 
 Thus:
 
-\[
+$$
 \text{small-grain surface area}
 \propto
 R(1-f_{\rm dust,l})
-\]
+$$
 
 and
 
-\[
+$$
 \text{large-grain surface area}
 \propto
 f_{\rm dust,l}.
-\]
+$$
 
 Therefore the large-grain fraction of total surface area, and hence the assumed large-grain fraction of ice mass, is
 
-\[
+$$
 f_{\rm ice,l}
 =
 \frac{f_{\rm dust,l}}
 {R(1-f_{\rm dust,l})+f_{\rm dust,l}}.
-\]
+$$
 
 ---
 
@@ -376,30 +376,30 @@ f_{\rm ice,l}
 
 Suppose
 
-\[
+$$
 f_{\rm dust,l}=0.1
-\]
+$$
 
 and
 
-\[
+$$
 R=1000.
-\]
+$$
 
 Then:
 
-\[
+$$
 f_{\rm ice,l}
 =
 \frac{0.1}{1000(0.9)+0.1}
 \approx1.11\times10^{-4}.
-\]
+$$
 
 So only about
 
-\[
+$$
 0.011\%
-\]
+$$
 
 of the ice would be assigned to the large grains under this assumption.
 
@@ -430,19 +430,19 @@ What fraction of the ice mass goes onto LARGE grains?
 
 For example:
 
-\[
+$$
 \rho_{\rm H_2O,l}
 =
 f_{\rm ice,l}\rho_{\rm H_2O}
-\]
+$$
 
 and
 
-\[
+$$
 \rho_{\rm H_2O,s}
 =
 (1-f_{\rm ice,l})\rho_{\rm H_2O}.
-\]
+$$
 
 The same splitting is applied to each ice species.
 
@@ -454,12 +454,12 @@ The relative amount of H2O versus CO2 versus CO comes from their chemical abunda
 
 After determining the mass densities, the paper converts each material's mass density into a volume-per-volume quantity:
 
-\[
+$$
 \boxed{
 V_i=
 \frac{\rho_i}{\rho_{m,i}}
 }
-\]
+$$
 
 where:
 
@@ -474,33 +474,33 @@ The paper calls this the "volume density (volume of material per volume of space
 
 Start from
 
-\[
+$$
 \rho_m=\frac{M}{V}.
-\]
+$$
 
 Rearrange:
 
-\[
+$$
 V=\frac{M}{\rho_m}.
-\]
+$$
 
 For a cell, the mass per unit cell volume is \(\rho_i\). Therefore
 
-\[
+$$
 \frac{V_i}{V_{\rm cell}}
 =
 \frac{\rho_i}{\rho_{m,i}}.
-\]
+$$
 
 So the paper's `V_i` can be understood as:
 
-\[
+$$
 \boxed{
 V_i=
 \frac{\text{volume occupied by material }i}
 {\text{volume of the cell}}
 }
-\]
+$$
 
 It is therefore dimensionless.
 
@@ -510,35 +510,35 @@ It is therefore dimensionless.
 
 Suppose:
 
-\[
+$$
 \rho_{\rm H_2O}=0.01\ {\rm g\,cm^{-3}}
-\]
+$$
 
 and the material density of H2O ice is
 
-\[
+$$
 \rho_{m,\rm H_2O}=0.87\ {\rm g\,cm^{-3}}.
-\]
+$$
 
 Then:
 
-\[
+$$
 V_{\rm H_2O}
 =
 \frac{0.01}{0.87}
 =
 0.0115.
-\]
+$$
 
 This means that the amount of H2O mass in the cell would occupy about 1.15% of the cell volume if it were packed at its bulk material density.
 
 If the actual cell volume were 100 cm^3, then the corresponding physical H2O volume would be
 
-\[
+$$
 0.0115\times100
 =
 1.15\ {\rm cm^3}.
-\]
+$$
 
 ---
 
@@ -548,48 +548,48 @@ The `V_i` values are not yet normalized fractions of the solid mixture.
 
 The paper then calculates
 
-\[
+$$
 \boxed{
 f_i=
 \frac{V_i}{\sum_j V_j}
 }
-\]
+$$
 
 where the sum is over all constituents in the mixture.
 
 For example, suppose:
 
-\[
+$$
 V_{\rm sil}=0.60,
-\]
+$$
 
-\[
+$$
 V_{\rm H_2O}=0.30,
-\]
+$$
 
-\[
+$$
 V_{\rm CO_2}=0.10.
-\]
+$$
 
 Then:
 
-\[
+$$
 \sum_i V_i=1.00.
-\]
+$$
 
 So:
 
-\[
+$$
 f_{\rm sil}=60\%,
-\]
+$$
 
-\[
+$$
 f_{\rm H_2O}=30\%,
-\]
+$$
 
-\[
+$$
 f_{\rm CO_2}=10\%.
-\]
+$$
 
 These are **volume fractions**.
 
@@ -601,41 +601,41 @@ These are not the same.
 
 Suppose:
 
-\[
+$$
 \rho_{\rm sil}=3\times10^{-14}
-\]
+$$
 
 and
 
-\[
+$$
 \rho_{\rm H_2O}=1\times10^{-14}
-\]
+$$
 
 g cm^-3.
 
 The mass fractions would be
 
-\[
+$$
 X_{\rm sil}
 =
 \frac{3}{3+1}
 =
 75\%
-\]
+$$
 
 and
 
-\[
+$$
 X_{\rm H_2O}=25\%.
-\]
+$$
 
 But silicate and H2O have different intrinsic densities.
 
 Using
 
-\[
+$$
 V_i=\frac{\rho_i}{\rho_{m,i}}
-\]
+$$
 
 changes the relative volumes.
 
@@ -664,15 +664,15 @@ The volume fractions tell us how much of the grain's material is represented by 
 
 For example:
 
-\[
+$$
 f_{\rm sil}=0.60
-\]
+$$
 
 means 60% of the material volume is assigned to silicate.
 
-\[
+$$
 f_{\rm H_2O}=0.30
-\]
+$$
 
 means 30% is assigned to H2O ice.
 
@@ -686,11 +686,11 @@ For each pure material, the authors collect laboratory-measured optical constant
 
 The complex refractive index can be written as
 
-\[
+$$
 \boxed{
 m(\lambda)=n(\lambda)+ik(\lambda)
 }
-\]
+$$
 
 where:
 
@@ -719,15 +719,15 @@ To mix materials at a given wavelength, all datasets need to be evaluated at the
 
 The paper therefore interpolates every optical-constant dataset onto a common grid of 683 wavelength points between
 
-\[
+$$
 0.1\ \mu{\rm m}
-\]
+$$
 
 and
 
-\[
+$$
 104\ \mu{\rm m}.
-\]
+$$
 
 The grid is particularly dense in the near-to-mid-IR, where the ice features occur.
 
@@ -777,27 +777,27 @@ Instead, they construct one effective optical medium.
 
 For each material:
 
-\[
+$$
 m_i=n_i+ik_i
-\]
+$$
 
 and therefore
 
-\[
+$$
 \epsilon_i=m_i^2.
-\]
+$$
 
 The Bruggeman effective-medium approximation finds an effective dielectric function
 
-\[
+$$
 \epsilon_{\rm eff}
-\]
+$$
 
 from the individual dielectric functions and volume fractions.
 
 For multiple constituents, the Bruggeman equation can be expressed as
 
-\[
+$$
 \boxed{
 \sum_i
 f_i
@@ -805,17 +805,17 @@ f_i
 {\epsilon_i+2\epsilon_{\rm eff}}
 =0
 }
-\]
+$$
 
 Then:
 
-\[
+$$
 m_{\rm eff}
 =
 \sqrt{\epsilon_{\rm eff}}
 =
 n_{\rm eff}+ik_{\rm eff}.
-\]
+$$
 
 So the calculation is:
 
@@ -863,29 +863,29 @@ This is an assumption of the model.
 
 Once the authors have
 
-\[
+$$
 n_{\rm eff}(\lambda)
-\]
+$$
 
 and
 
-\[
+$$
 k_{\rm eff}(\lambda),
-\]
+$$
 
 they can calculate the optical behavior of the grains using Mie theory.
 
 This produces quantities such as:
 
-\[
+$$
 \kappa_{\rm abs}(\lambda)
-\]
+$$
 
 and
 
-\[
+$$
 \kappa_{\rm scat}(\lambda).
-\]
+$$
 
 It also gives the angular scattering information, including the phase function/scattering matrix.
 
@@ -901,14 +901,14 @@ The whole method can therefore be understood as four major layers.
 
 The chemical model tells us:
 
-\[
+$$
 x_{\rm H_2O},
 x_{\rm CO},
 x_{\rm CO_2},
 x_{\rm CH_3OH},
 x_{\rm NH_3},
 x_{\rm CH_4}.
-\]
+$$
 
 These describe **how much of each ice species exists relative to hydrogen**.
 
@@ -916,49 +916,49 @@ These describe **how much of each ice species exists relative to hydrogen**.
 
 Equation (5):
 
-\[
+$$
 x_i\rightarrow\rho_i.
-\]
+$$
 
 Equation (6):
 
-\[
+$$
 \rho_i\rightarrow
 \rho_{i,\rm small},
 \rho_{i,\rm large}.
-\]
+$$
 
 Then:
 
-\[
+$$
 \rho_i\rightarrow V_i
-\]
+$$
 
 and
 
-\[
+$$
 V_i\rightarrow f_i.
-\]
+$$
 
 Now we know the **composition of the dust/ice material by volume**.
 
 ## Layer 3 — Optical properties
 
-\[
+$$
 \{f_i,n_i,k_i\}
 \rightarrow
 n_{\rm eff},k_{\rm eff}
-\]
+$$
 
 using Bruggeman mixing.
 
 Then:
 
-\[
+$$
 n_{\rm eff},k_{\rm eff}
 \rightarrow
 \kappa_{\rm abs},\kappa_{\rm scat},P(\theta)
-\]
+$$
 
 using Mie theory.
 
@@ -981,11 +981,11 @@ to calculate synthetic spectra/images.
 
 ### A. Ice abundance is not ice mass density
 
-\[
+$$
 x_{\rm ice}
 \neq
 \rho_{\rm ice}.
-\]
+$$
 
 Abundance is a number ratio relative to hydrogen.
 
@@ -1005,19 +1005,19 @@ The ice is assigned to dust populations through Equation (6).
 
 ### C. `f_dust,l` is not `f_ice,l`
 
-\[
+$$
 f_{\rm dust,l}
 =
 \text{fraction of dust mass in large grains}
-\]
+$$
 
 whereas
 
-\[
+$$
 f_{\rm ice,l}
 =
 \text{fraction of ice mass assigned to large grains}.
-\]
+$$
 
 They are generally very different because the ice allocation is surface-area weighted.
 
@@ -1039,15 +1039,15 @@ The chemical abundances answer:
 
 First:
 
-\[
+$$
 V_i=\frac{\rho_i}{\rho_{m,i}}.
-\]
+$$
 
 Then:
 
-\[
+$$
 f_i=\frac{V_i}{\sum_jV_j}.
-\]
+$$
 
 So `V_i` is the unnormalized volume-per-cell quantity, while `f_i` is the normalized composition by volume.
 
@@ -1057,9 +1057,9 @@ So `V_i` is the unnormalized volume-per-cell quantity, while `f_i` is the normal
 
 Because different materials have different intrinsic densities:
 
-\[
+$$
 f_i\neq X_i
-\]
+$$
 
 in general.
 
@@ -1071,7 +1071,7 @@ The paper explicitly uses volume fractions for the dust/ice mixture.
 
 ### Equation (5)
 
-\[
+$$
 \boxed{
 \rho_{\rm ice}
 =
@@ -1079,64 +1079,64 @@ The paper explicitly uses volume fractions for the dust/ice mixture.
 \frac{x_{\rm ice}M_{\rm ice}}
 {x_gM_g}
 }
-\]
+$$
 
 **Meaning:** Convert chemical abundance into the mass density of each ice species.
 
 ### Equation (6)
 
-\[
+$$
 \boxed{
 f_{\rm ice,l}
 =
 \frac{f_{\rm dust,l}}
 {\sqrt{a_{\max,l}/a_{\max,s}}(1-f_{\rm dust,l})+f_{\rm dust,l}}
 }
-\]
+$$
 
 **Meaning:** Divide the ice mass between large and small grains according to their available surface area.
 
 ### Volume calculation
 
-\[
+$$
 \boxed{
 V_i=\frac{\rho_i}{\rho_{m,i}}
 }
-\]
+$$
 
 **Meaning:** Convert the mass density of each constituent into the volume it would occupy at its intrinsic material density.
 
 ### Volume fraction
 
-\[
+$$
 \boxed{
 f_i=\frac{V_i}{\sum_jV_j}
 }
-\]
+$$
 
 **Meaning:** Normalize the material volumes to obtain the composition by volume.
 
 ### Bruggeman
 
-\[
+$$
 \boxed{
 \{f_i,\epsilon_i\}
 \rightarrow
 \epsilon_{\rm eff}
 }
-\]
+$$
 
 **Meaning:** Combine the optical properties of the intimate mixture into one effective optical medium.
 
 ### Mie theory
 
-\[
+$$
 \boxed{
 n_{\rm eff},k_{\rm eff}
 \rightarrow
 \kappa_{\rm abs},\kappa_{\rm scat},P(\theta)
 }
-\]
+$$
 
 **Meaning:** Calculate how the resulting grains absorb and scatter light.
 
