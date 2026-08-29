@@ -8,6 +8,7 @@ The algorithm will categorize the items into "kk" groups or clusters of similari
 4. **Repeat**: This process repeats until the centroids no longer change or the maximum number of iterations is reached.
 
 ## Mathematical Formulation
+
 1. Euclidean Distance
 
 The distance between a data point \(x\) and a centroid \(c\) is calculated as:
@@ -19,6 +20,7 @@ where:
 \(x_i\) is the \(i^{th}\) feature of the data point.
 \(c_i\) is the \(i^{th}\) feature of the centroid.
 \(n\) is the number of features.
+
 2. Centroid Update
 
 After assigning all data points to clusters, each centroid is updated as the mean of all points belonging to that cluster:
