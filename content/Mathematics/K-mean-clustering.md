@@ -1,33 +1,198 @@
-# K-Mean Clustering
+# K-Means Clustering
 
-The algorithm will categorize the items into "kk" groups or clusters of similarity. To calculate that similarity we will use the Euclidean distance as a measurement. The algorithm works as follows:
+K-Means is an **iterative unsupervised learning algorithm** that divides a dataset into \(k\) clusters based on similarity.
 
-1. **Initialization**: We begin by randomly selecting k cluster centroids
-2. **Assignment Step**: Each data point is assigned to the nearest centroid, forming clusters.
-3. **Update Step**: After the assignment, we recalculate the centroid of each cluster by averaging the points within it.
-4. **Repeat**: This process repeats until the centroids no longer change or the maximum number of iterations is reached.
+## 1. Choose the Number of Clusters
 
-## Mathematical Formulation
+Choose the desired number of clusters \(k\).
 
-1. Euclidean Distance
+For example:
 
-The distance between a data point \(x\) and a centroid \(c\) is calculated as:
+$$
+k = 3
+$$
 
-$$ d(x,c) = \sqrt{\sum_{i=1}^{n}(x_i-c_i)^2} $$
+This means the algorithm will create **3 clusters**.
+
+---
+
+## 2. Initialize the Centroids
+
+Select \(k\) initial centroids.
+
+$$
+c_1,c_2,\ldots,c_k
+$$
+
+These centroids can be selected randomly or using an initialization method such as **K-Means++**.
+
+> At this stage, the centroids are fixed while we perform the first assignment.
+
+---
+
+## 3. Calculate Distances
+
+For every data point \(x_i\), calculate its distance from **each centroid**.
+
+For Euclidean distance:
+
+$$
+d(x_i,c_j)
+=
+\sqrt{\sum_{m=1}^{n}(x_{im}-c_{jm})^2}
+$$
 
 where:
 
-\(x_i\) is the \(i^{th}\) feature of the data point.
-\(c_i\) is the \(i^{th}\) feature of the centroid.
-\(n\) is the number of features.
+* \(x_i\) = a data point
+* \(c_j\) = the \(j^{th}\) centroid
+* \(n\) = number of features
 
-2. Centroid Update
+---
 
-After assigning all data points to clusters, each centroid is updated as the mean of all points belonging to that cluster:
+## 4. Assign Every Point to the Nearest Centroid
 
-$$ c_j = \frac{1}{|C_j|}\sum_{x_i \in C_j} x_i $$
+For each point, find the centroid with the smallest distance.
+
+$$
+\text{cluster}(x_i)
+=
+\arg\min_j d(x_i,c_j)
+$$
+
+For example:
+
+| Point   | Distance to \(C_1\) | Distance to \(C_2\) | Assignment |
+| ------- | ------------------: | ------------------: | ---------- |
+| \(x_1\) |                   2 |                   7 | \(C_1\)    |
+| \(x_2\) |                   4 |                   3 | \(C_2\)    |
+| \(x_3\) |                   1 |                   8 | \(C_1\)    |
+
+**Important:** All points are assigned using the **same, current centroids**. We don't change a centroid after each individual assignment.
+
+---
+
+## 5. Update the Centroids
+
+After **all points have been assigned**, calculate a new centroid for each cluster.
+
+The new centroid is the mean of all points belonging to that cluster:
+
+$$
+c_j
+=
+\frac{1}{|C_j|}
+\sum_{x_i\in C_j}x_i
+$$
 
 where:
 
-\(C_j\) is the set of points assigned to the \(j^{th}\) cluster.
-\(|C_j|\) is the number of points in that cluster.
+* \(C_j\) = set of points assigned to cluster \(j\)
+* \(|C_j|\) = number of points in cluster \(j\)
+
+Thus, the centroid **moves toward the center of its newly assigned points**.
+
+---
+
+## 6. Reassign All Points
+
+Now the centroids have changed.
+
+Therefore, we **recalculate the distance for every point**, including points that were already assigned in the previous iteration.
+
+$$
+\text{cluster}(x_i)
+=
+\arg\min_j d(x_i,c_j^{new})
+$$
+
+A point that belonged to \(C_1\) previously may now be closer to \(C_2\).
+
+---
+
+## 7. Repeat the Process
+
+Repeat:
+
+$$
+\boxed{
+\text{Calculate distances}
+\rightarrow
+\text{Assign points}
+\rightarrow
+\text{Update centroids}
+\rightarrow
+\text{Reassign points}
+}
+$$
+
+until the clusters become stable.
+
+---
+
+## 8. Check the Stopping Condition
+
+K-Means typically stops when one of the following occurs:
+
+* **Centroids no longer change significantly**
+* **Cluster assignments no longer change**
+* The change in the objective function becomes very small
+* A maximum number of iterations is reached
+
+Conceptually:
+
+```text
+Initialize centroids
+       ↓
+Calculate distances
+       ↓
+Assign ALL points
+       ↓
+Update ALL centroids
+       ↓
+Did assignments/centroids change?
+       ↓
+    Yes ─────────→ Calculate distances again
+       │
+       No
+       ↓
+     STOP
+```
+
+---
+
+## 9. Final Clusters
+
+When the algorithm stops, the final assignments represent the resulting \(k\) clusters.
+
+The overall process can be summarized as:
+
+$$
+\boxed{
+\text{Initialize}
+\rightarrow
+\text{Assign}
+\rightarrow
+\text{Update}
+\rightarrow
+\text{Assign}
+\rightarrow
+\text{Update}
+\rightarrow
+\cdots
+\rightarrow
+\text{Converge}
+}
+$$
+
+### Key idea
+
+The **assignment step** asks:
+
+> *"Given the current centroids, which cluster does each point belong to?"*
+
+The **update step** asks:
+
+> *"Given the current cluster assignments, where should each centroid be?"*
+
+These two steps repeatedly correct each other until the clusters stabilize.
