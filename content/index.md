@@ -6,3 +6,4 @@ Welcome to my personal knowledge library.
 
 - [[Programming]]
 - [[IceModel]]
+- [[Mathematics]]
