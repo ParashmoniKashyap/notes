@@ -5,5 +5,5 @@ Welcome to my personal knowledge library.
 ## Categories
 
 - [[Programming]]
-- [[IceModel]]
+- [[Physical_Model]]
 - [[Mathematics]]
