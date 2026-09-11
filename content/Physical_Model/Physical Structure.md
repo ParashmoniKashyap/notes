@@ -1,9 +1,3 @@
----
-layout: page
-title: "Physical Structure of Protoplanetary Disks"
-description: "A concise physical and mathematical overview of the structure of protoplanetary disks"
----
-
 # 🌌 Physical Structure of Protoplanetary Disks
 
 > **Core idea:** A protoplanetary disk is a rotating, flattened structure of gas and dust surrounding a young star.  
