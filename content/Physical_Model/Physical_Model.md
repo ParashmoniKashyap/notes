@@ -1,6 +1,3 @@
-Absolutely — below is a polished, self-contained Markdown note designed to be dropped directly into a **GitHub Pages / Jekyll** site. It combines the physical picture, derivation, assumptions, equations, vertical structure, radial structure, scale height, Gaussian approximation, and historical origin of the hydrostatic-equilibrium equation.
-
-````markdown
 ---
 layout: page
 title: "Physical Structure of Protoplanetary Disks"
@@ -1224,7 +1221,4 @@ Thus:
 > ### One-line summary
 >
 > **A protoplanetary disk exists as a thin rotating structure because stellar gravity is balanced by orbital motion in the radial direction and by gas pressure in the vertical direction; given the disk temperature, this vertical hydrostatic balance determines its density structure.**
-
-```
-```
 
